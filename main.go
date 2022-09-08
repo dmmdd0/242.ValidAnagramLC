@@ -13,6 +13,9 @@ func main() {
 
 func isAnagram(s string, t string) bool {
 
+	if len(s) != len(t) {
+		return false
+	}
 	smap := make(map[int32]int)
 	for _, v := range s {
 		smap[v]++
